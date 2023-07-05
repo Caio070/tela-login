@@ -59,7 +59,7 @@
     margin: 0;
 }
 
-.textfield {
+.form-control {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -68,9 +68,9 @@
     margin: 10px 0px;
 }
 
-.textfield>input {
+.form-control>input {
     width: 100%;
-    border: none;
+    border: 2px solid #201b2c;
     border-radius: 10px;
     padding: 15px;
     background: #514869;
@@ -81,19 +81,23 @@
     box-sizing: border-box;
 }
 
-.textfield>label {
+.form-control>label {
     color: #f0ffffde;
     margin-bottom: 10px;
 }
 
-.textfield>input::placeholder {
+.form-control>small {
+    margin-top: 3px;
+    visibility: hidden;
+}
+
+.form-control>input::placeholder {
     color: #f0ffff94;
 }
 
 .btn-login {
     width: 100%;
     padding: 16px 0px;
-    margin: 25px;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -104,6 +108,21 @@
     background: #00ff88;
     cursor: pointer;
     box-shadow: 0px 20px 40px -12px #00ff8052;
+}
+
+/* Error and sucess */
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
 }
 
 @media only screen and (max-width: 950px) {
